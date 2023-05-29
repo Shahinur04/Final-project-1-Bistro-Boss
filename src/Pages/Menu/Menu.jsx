@@ -18,9 +18,9 @@ const Menu = () => {
 
           </SectionTitle>
           
-            <div>
+            <div className='grid md:grid-cols-2 gap-4 mb-12'>
                   {
-                    menu.map(item =><MenuItem key={item._id}>
+                    menu.map(item =><MenuItem key={item._id} item={item}>
                     </MenuItem>)
                   }
             </div>
