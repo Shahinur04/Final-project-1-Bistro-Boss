@@ -2,6 +2,9 @@ import React from "react";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import featured from "../../assets/home/featured.jpg";
 import './featured.css';
+
+
+
 const Featured = () => {
   return (
     < div className="featured-img mb-12 mt-12 pt-10 bg-fixed">
