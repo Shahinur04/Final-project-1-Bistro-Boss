@@ -2,9 +2,16 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import Covered from "../Shared/Covered/Covered";
 import menuImg from "../../assets/menu/banner3.jpg";
-import Menu from "../Menu/Menu";
+import useMenu from "../../hooks/useMenu";
+
 
 const OurMenu = () => {
+  const [menu]=useMenu();
+  const dessert=menu.filter(item=>item.category ==='dessert');
+  const soup=menu.filter(item=>item.category ==='soup');
+  const pizza=menu.filter(item=>item.category ==='pizza');
+  const salad=menu.filter(item=>item.category ==='salad');
+  
   return (
     <div>
       <Helmet>
@@ -13,16 +20,7 @@ const OurMenu = () => {
 
       <Covered img={menuImg}
       title="our menu"></Covered>
-      <Menu></Menu>
-      <Covered img={menuImg}
-      title="our menu"></Covered>
-      <Menu></Menu>
-      <Covered img={menuImg}
-      title="our menu"></Covered>
-      <Menu></Menu>
-      <Covered img={menuImg}
-      title="our menu"></Covered>
-      <Menu></Menu>
+      
       
      
     </div>
