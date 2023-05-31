@@ -6,7 +6,7 @@ const Covered = ({img,title}) => {
   return (
     <Parallax
         blur={{ min: -15, max: 15 }}
-        bgImage={img}
+        bgImage={imgnp}
         bgImageAlt="the dog"
         strength={-200}
     >
