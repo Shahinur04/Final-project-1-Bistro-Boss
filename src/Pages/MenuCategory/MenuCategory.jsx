@@ -1,15 +1,21 @@
-import React from 'react';
-import useMenu from '../../hooks/useMenu';
+import React from "react";
+import MenuItem from "../Shared/MenuItem/MenuItem";
+import Covered from "../Shared/Covered/Covered";
 
-const MenuCategory = () => {
-    const [menu]=useMenu();
+const MenuCategory = ({items,title,img}) => {
 
-    const popular=menu.filter(item=>item.category === 'popular');
-    return (
-        <div>
-            
-        </div>
-    );
+
+  return (
+    <div>
+        {title && <Covered img={img}
+      title="our menu"></Covered>}
+      <div className="grid md:grid-cols-2 gap-4 mb-12 mt-16">
+        {items.map((item) => (
+          <MenuItem key={item._id} item={item}></MenuItem>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default MenuCategory;
